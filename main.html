@@ -73,6 +73,23 @@
     </head>
 
     <body>
+	<script type='text/javascript'>
+
+(function()
+{
+  if( window.localStorage )
+  {
+    if( !localStorage.getItem('firstLoad') )
+    {
+      localStorage['firstLoad'] = true;
+      location.href = 'https://funultimate.github.io/Cookie-Clicker/'
+    }  
+    else
+      localStorage.removeItem('firstLoad');
+  }
+})();
+
+</script>
         <div class="gm4html5_div_class" id="gm4html5_div_id">
         <img src="html5game/splash.png" id="GM4HTML5_loadingscreen" alt="GameMaker:HTML5 loading screen" style="display:none;"/>
             <canvas id="canvas" width="853" height="480">
